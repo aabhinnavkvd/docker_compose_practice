@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-peg52q=(0ct+6p#(^h1^-yh!jnso7evp)&)8)yr8ld04a*i2de
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED').split()
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS').split()
 
 
 # Application definition
