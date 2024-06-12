@@ -15,6 +15,7 @@ services:
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
       - DB_NAME=${DB_NAME}
+      - CSRF_TRUSTED=${CSRF_TRUSTED}
 
   my_nginx:
     build: 
