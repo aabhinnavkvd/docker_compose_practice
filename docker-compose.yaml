@@ -7,6 +7,8 @@ services:
     image: my_django_app:1.0
     ports:
       - 8000:8000
+    volumes:
+      - static_files:/django_folder/staticfiles
     container_name: django_container
     command: >
       sh -c "python manage.py migrate && gunicorn todoproject.wsgi:application --bind 0.0.0.0:8000"
@@ -20,7 +22,9 @@ services:
   my_nginx:
     build: 
       context: ./nginx
-    container_name: nginx_xontainer
+    container_name: nginx_container
+    volumes:
+      - static_files:/home/myapp/staticfiles
     ports:
       - 80:80
     depends_on:
