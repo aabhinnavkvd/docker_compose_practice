@@ -10,7 +10,7 @@ services:
     expose:
       - 8000
     volumes:
-      - static_files:/django_folder/staticfiles
+      - static_files:/django/staticfiles
     container_name: django_container
     command: >
       sh -c "python manage.py migrate && gunicorn todoproject.wsgi:application --bind 0.0.0.0:8000"
