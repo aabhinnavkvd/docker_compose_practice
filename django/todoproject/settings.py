@@ -90,10 +90,10 @@ DATABASES = {
         'PASSWORD': os.environ.get("DB_PASS"),
         'NAME': os.environ.get("DB_NAME"),
         'PORT': '3306',
-            },
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",          
         } 
+            }
         }
 
 
