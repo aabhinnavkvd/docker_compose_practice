@@ -30,3 +30,5 @@ services:
     depends_on:
       - my_django
 
+volumes:
+  static_files:
