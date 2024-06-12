@@ -5,8 +5,10 @@ services:
     build: 
       context: ./django
     image: my_django_app:1.0
-    ports:
-      - 8000:8000
+    # ports:
+    #   - 8000:8000
+    expose:
+      - 8000
     volumes:
       - static_files:/django_folder/staticfiles
     container_name: django_container
